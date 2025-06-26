@@ -16,7 +16,7 @@ public class SelTestTutorialPointCheck {
         //System.setProperty("webdriver.chrome.driver", "C:\\Users\\hanss\\Desktop\\Software Development Academy\\Kody\\SeleniumSkillmea2\\src\\main\\resources\\chromedriver.exe");
         //ovladac = new ChromeDriver();
 
-        WebDriverManager.chromedriver().setup();
+        WebDriverManager.firefoxdriver().setup();
         ovladac = new ChromeDriver();
     }
 
@@ -34,6 +34,7 @@ public class SelTestTutorialPointCheck {
         //Kliknuti na checkboxy
         ovladac.findElement(By.id("c_bf_1")).click();
         ovladac.findElement(By.id("c_bf_2")).click();
+
     }
 
 }
