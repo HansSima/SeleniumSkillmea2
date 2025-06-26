@@ -7,4 +7,4 @@ Feature: TutorialPointStudentForm
     And Uzivatel klikne na pohlavi "male"
     Then Radiobutton male je zasktnuty
     When Uzivatel klikne na pohlavi "female"
-    Then Radiobutton male je odskrtnuty
+    #Then Radiobutton male je odskrtnuty

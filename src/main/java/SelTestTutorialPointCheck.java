@@ -21,7 +21,7 @@ public class SelTestTutorialPointCheck {
         //System.setProperty("webdriver.gecko.driver", "C:\\Users\\hanss\\Desktop\\Software Development Academy\\Kody\\BddZ4089\\src\\main\\resources\\geckodriver.exe");
         //ovladac = new FirefoxDriver();
 
-        WebDriverManager.firefoxdriver().setup();
+        WebDriverManager.chromedriver().setup();
         ovladac = new ChromeDriver();
     }
 
