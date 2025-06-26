@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,7 +13,10 @@ public class SelTestTutorialPointCheck {
 
     @BeforeEach
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\hanss\\Desktop\\Software Development Academy\\Kody\\SeleniumSkillmea2\\src\\main\\resources\\chromedriver.exe");
+        //System.setProperty("webdriver.chrome.driver", "C:\\Users\\hanss\\Desktop\\Software Development Academy\\Kody\\SeleniumSkillmea2\\src\\main\\resources\\chromedriver.exe");
+        //ovladac = new ChromeDriver();
+
+        WebDriverManager.chromedriver().setup();
         ovladac = new ChromeDriver();
     }
 
@@ -23,7 +27,6 @@ public class SelTestTutorialPointCheck {
 
     @Test
     public void checkboxTest() {
-
         //Prepnuti na stranku
         ovladac.get("https://www.tutorialspoint.com/selenium/practice/check-box.php");
         //Nalezeni plus elementu
@@ -31,9 +34,6 @@ public class SelTestTutorialPointCheck {
         //Kliknuti na checkboxy
         ovladac.findElement(By.id("c_bf_1")).click();
         ovladac.findElement(By.id("c_bf_2")).click();
-
-
-
     }
 
 }
