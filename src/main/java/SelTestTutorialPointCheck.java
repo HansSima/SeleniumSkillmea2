@@ -32,6 +32,7 @@ public class SelTestTutorialPointCheck {
 
     @Test
     public void checkboxTest() {
+
         //Prepnuti na stranku
         ovladac.get("https://www.tutorialspoint.com/selenium/practice/check-box.php");
         //Nalezeni plus elementu
@@ -39,9 +40,11 @@ public class SelTestTutorialPointCheck {
         //Kliknuti na checkboxy
         ovladac.findElement(By.id("c_bf_1")).click();
         ovladac.findElement(By.id("c_bf_2")).click();
-
+        //Kontrola zaskrtnuti nadrazeneho prvku
         assertTrue(ovladac.findElement(By.id("c_bs_1")).isSelected());
-
+        ovladac.findElement(By.id("c_bf_1")).click();
+        //Kontrola odskrtnuti nadrazeneho prvku
+        assertFalse(ovladac.findElement(By.id("c_bs_1")).isSelected());
     }
 
 }
